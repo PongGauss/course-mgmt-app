@@ -200,7 +200,7 @@ const SignupForm = () => {
             className="form-check-input"
             type="radio"
             id="genderOptionO"
-            value="F"
+            value="O"
             {...register('gender', {
               required: true,
             })}
