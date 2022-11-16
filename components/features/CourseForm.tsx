@@ -4,12 +4,12 @@ import { useState } from 'react';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useForm } from 'react-hook-form';
 import Alert from 'react-bootstrap/Alert';
-import { setAuthenTokenToStorage, signup } from '@apis/auth';
+import { setAuthenTokenToStorage, signup } from '../../apis/auth';
 import Spinner from 'react-bootstrap/Spinner';
-import { setAuthState } from '@stores/authSlice';
+import { setAuthState } from '../../stores/authSlice';
 import { useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
-import { createCourse } from '@apis/course';
+import { createCourse } from '../../apis/course';
 
 interface FormValues {
   name?: string;

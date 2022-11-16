@@ -1,7 +1,7 @@
 import axios from "axios";
 import {
   getAuthenTokenFromStorage,
-} from "@apis/auth";
+} from "../apis/auth";
 
 const server = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL,

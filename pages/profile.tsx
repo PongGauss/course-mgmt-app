@@ -1,4 +1,4 @@
-import ProfileForm from '@components/features/ProfileForm';
+import ProfileForm from '../components/features/ProfileForm';
 
 const Login = () => {
   return (

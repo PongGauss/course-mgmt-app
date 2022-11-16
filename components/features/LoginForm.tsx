@@ -5,8 +5,8 @@ import Alert from 'react-bootstrap/Alert';
 import Spinner from 'react-bootstrap/Spinner';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { login, setAuthenTokenToStorage } from '@apis/auth';
-import { setAuthState } from '@stores/authSlice';
+import { login, setAuthenTokenToStorage } from '../../apis/auth';
+import { setAuthState } from '../../stores/authSlice';
 import { useDispatch } from 'react-redux';
 
 interface LoginFormValues {

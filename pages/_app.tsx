@@ -1,14 +1,14 @@
 // import '../styles/globals.css'
-import { Layout } from '@components/layouts/Layout';
+import { Layout } from '../components/layouts/Layout';
 import type { AppProps } from 'next/app';
-import '@styles/app.css';
-import '@styles/custom.css';
+import '../styles/app.css';
+import '../styles/custom.css';
 import Head from 'next/head';
 import { NextAdapter } from 'next-query-params';
 import { QueryParamProvider } from 'use-query-params';
 import { wrapper } from '../stores/store';
 import { Provider } from 'react-redux';
-import AuthChecker from '@components/features/AuthChecker';
+import AuthChecker from '../components/features/AuthChecker';
 import { useRouter } from 'next/router';
 // import Script from "next/script";
 

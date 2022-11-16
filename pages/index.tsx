@@ -1,5 +1,5 @@
-import CourseSearchForm from '@components/features/CourseSearchForm';
-import CourseSearchResult from '@components/features/CourseSearchResult';
+import CourseSearchForm from '../components/features/CourseSearchForm';
+import CourseSearchResult from '../components/features/CourseSearchResult';
 
 export default function Home() {
   return (

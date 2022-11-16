@@ -4,12 +4,12 @@ import { useEffect, useState } from 'react';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useForm } from 'react-hook-form';
 import Alert from 'react-bootstrap/Alert';
-import { setAuthenTokenToStorage, updateProfile } from '@apis/auth';
+import { setAuthenTokenToStorage, updateProfile } from '../../apis/auth';
 import Spinner from 'react-bootstrap/Spinner';
 import {
   setProfilePartialState,
   selectProfileState,
-} from '@stores/profileSlice';
+} from '../../stores/profileSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import { profile } from 'console';

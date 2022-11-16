@@ -1,4 +1,4 @@
-import CourseForm from '@components/features/CourseForm';
+import CourseForm from '../components/features/CourseForm';
 
 const CreateCourse = () => {
   return (

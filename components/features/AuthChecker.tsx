@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
-import { selectAuthState, setAuthState } from '@stores/authSlice';
-import { selectProfileState, setProfileState } from '@stores/profileSlice';
+import { selectAuthState, setAuthState } from '../../stores/authSlice';
+import { selectProfileState, setProfileState } from '../../stores/profileSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import { JwtHelper } from '../../jwtHelper';
 import { useRouter } from 'next/router';
-import { getProfile } from '@apis/auth';
+import { getProfile } from '../../apis/auth';
 
 const jwtHelper = new JwtHelper();
 
@@ -27,7 +27,7 @@ const AuthChecker = () => {
     } else {
       dispatch(setAuthState(true));
     }
-  }, [router, router.asPath]);
+  }, [router, router.asPath, dispatch]);
 
   useEffect(() => {
     if (!authState) return;
@@ -47,7 +47,7 @@ const AuthChecker = () => {
 
       fetchProfileData().catch(console.error);
     }
-  }, [profileState, authState]);
+  }, [profileState, authState, dispatch, router]);
 
   return <></>;
 };
