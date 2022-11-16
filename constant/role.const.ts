@@ -1,0 +1,4 @@
+export const ROLE_NAME = {
+  INSTRUCTOR: "INSTRUCTOR",
+  STUDENT: "STUDENT",
+};
