@@ -1,7 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useEffect, useState } from 'react';
-import 'react-datepicker/dist/react-datepicker.css';
 import { useForm } from 'react-hook-form';
 import Alert from 'react-bootstrap/Alert';
 import { setAuthenTokenToStorage, updateProfile } from '../../apis/auth';
@@ -31,7 +30,6 @@ const SignupForm = () => {
 
   const dispatch = useDispatch();
   const profileState = useSelector(selectProfileState);
-  console.log(profileState);
 
   const router = useRouter();
 
@@ -77,14 +75,11 @@ const SignupForm = () => {
       }
     } catch (e: any) {
       setShowAlert(true);
-      console.log(isShowAlert);
       if (e.response.status === 409) {
         setIsLoading(false);
       }
     }
   };
-
-  const [birthDateF, setBirthDateF] = useState<string>('1999-01-10');
 
   if (profileState) {
     setValue('firstName', profileState.firstName);
@@ -93,11 +88,6 @@ const SignupForm = () => {
     setValue('gender', profileState.gender);
     setValue('birthDate', profileState.birthDate);
   }
-
-  useEffect(() => {
-    const tmp = moment(profileState.birthDate, 'YYYY-MM-DD').toDate();
-    setBirthDateF(moment(tmp).format('YYYY-MM-DD'));
-  }, [profileState.birthDate]);
 
   return (
     <Form noValidate onSubmit={handleSubmit(onSubmitHandler)}>

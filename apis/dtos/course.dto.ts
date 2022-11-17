@@ -8,3 +8,8 @@ export interface CreateCourseReq {
   description?: string;
   category?: string;
 }
+
+export interface SearchCourseReq {
+  courseName?: string,
+  courseDate?: string,
+}
