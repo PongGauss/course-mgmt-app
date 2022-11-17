@@ -2,7 +2,10 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { selectProfileState } from '../../stores/profileSlice';
+import {
+  selectProfileState,
+  setProfileInitialState,
+} from '../../stores/profileSlice';
 import { selectAuthState, setAuthState } from '../../stores/authSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeAuthenTokenFromStorage } from '../../apis/auth';
@@ -17,6 +20,7 @@ export const Header = () => {
 
   const handleLogout = () => {
     dispatch(setAuthState(false));
+    dispatch(setProfileInitialState(true));
     removeAuthenTokenFromStorage();
     router.push('/login');
   };

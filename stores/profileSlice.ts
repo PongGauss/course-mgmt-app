@@ -46,10 +46,22 @@ export const profileSlice = createSlice({
       state.birthDate = action.payload.birthDate;
     },
 
+    setProfileInitialState(state, action) {
+      if (action.payload) {
+        state.firstName = '';
+        state.lastName = '';
+        state.nickName = '';
+        state.role = '';
+        state.gender = '';
+        state.birthDate = '';
+        state.uuid = '';
+      }
+    },
+
   },
 });
 
-export const { setProfileState, setProfilePartialState } = profileSlice.actions;
+export const { setProfileState, setProfilePartialState, setProfileInitialState } = profileSlice.actions;
 
 export const selectProfileState = (state: AppState) => state.profile;
 
