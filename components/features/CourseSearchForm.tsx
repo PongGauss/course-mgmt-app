@@ -10,7 +10,7 @@ import {
   selectCourseSearchingState,
   setCourseLoadingState,
   setCourseSearchingState,
-} from 'course-mgmt-app/stores/courseSlice';
+} from '../../stores/courseSlice';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 

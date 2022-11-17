@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 import Image from 'next/image';
 import createSubject from 'react-hook-form/dist/utils/createSubject';
 import { CourseItem } from '../interfaces/course.interface';

@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 import CourseSearchForm from '../components/features/CourseSearchForm';
 import CourseSearchResult from '../components/features/CourseSearchResult';
 

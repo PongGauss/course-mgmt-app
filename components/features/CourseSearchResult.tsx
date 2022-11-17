@@ -1,9 +1,9 @@
-import { getCourses } from 'course-mgmt-app/apis/course';
+import { getCourses } from '../../apis/course';
 import {
   selectCourseLoadingState,
   selectCourseSearchingState,
   setCourseLoadingState,
-} from 'course-mgmt-app/stores/courseSlice';
+} from '../../stores/courseSlice';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import CourseCard from '../atoms/CourseCard';
